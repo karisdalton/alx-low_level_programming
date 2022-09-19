@@ -4,7 +4,7 @@
  * Auth: Karis Dalton
  */
 #include "main.h"
-#include <stdio.h>
+#include "stdio.h"
 
 /**
  * print_array - prints the number of elements of an array followed by a new line
