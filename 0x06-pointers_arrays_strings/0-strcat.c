@@ -1,18 +1,18 @@
 /*
- * File: 1-strncat.c
+ * File: 0-strcat.c
  * Auth: Karis D
  */
 
 #include "main.h"
+
 /**
- * _strncat - concatenates two string together
- * @src: parameter to append to dest
- * @dest: parameter to be appended to
- * @n: maximum number bytes usable
+ * _strcat - concatenates two string together
+ * @src: Char[] to append to dest
+ * @dest: Char[] to be appended to
  * Return: Always 0.
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 	int i = 0;
 	int j = 0;
@@ -22,7 +22,7 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 	}
 
-	while (j < n && src[j] != '\0')
+	while (src[j] != '\0')
 	{
 		dest[i] += src[j];
 		i++;

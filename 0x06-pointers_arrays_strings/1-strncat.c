@@ -1,27 +1,35 @@
 /*
- * File: 2-strncpy.c
+ * File: 1-strncat.c
  * Auth: Karis D
  */
 
 #include "main.h"
-
 /**
- * *_strncpy - copies a string
- * @dest: pointer to the copied string
- * @src: pointer to the string to be copied
- * @n: int
- * Return: destination
-*/
+ * _strncat - concatenates two string together
+ * @src: parameter to append to dest
+ * @dest: parameter to be appended to
+ * @n: maximum number bytes usable
+ * Return: Always 0.
+ */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i;
+	int i = 0;
+	int j = 0;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
 
-	for (; i < n; i++)
-		dest[i] = '\0';
+	while (j < n && src[j] != '\0')
+	{
+		dest[i] += src[j];
+		i++;
+		j++;
+	}
+
+	dest += '\0';
 
 	return (dest);
 }
